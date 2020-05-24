@@ -1,6 +1,7 @@
 package com.andile.bookapi.entities;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -30,9 +31,9 @@ public class BookCategory {
 	private String categoryName;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
-	private Set<Book> book;
+	private List<Book> book;
 
-	public BookCategory(long id, String categoryName, Set<Book> book) {
+	public BookCategory(long id, String categoryName, List<Book> book) {
 		
 		this.id = id;
 		this.categoryName = categoryName;

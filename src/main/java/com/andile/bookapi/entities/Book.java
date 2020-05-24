@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -49,7 +50,7 @@ public class Book {
 	private LocalDateTime updatedOn;
 	@ManyToOne
 	///
-	@JoinColumn(name="category_id", nullable=false)
+	@JoinColumn(foreignKey = @ForeignKey(name="category_id") 	, nullable=false)
 	private BookCategory category;
 
 
