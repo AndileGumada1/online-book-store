@@ -13,11 +13,9 @@ public class BookApiApplication {
 		SpringApplication.run(BookApiApplication.class, args);
 		
 		// Create the Flyway instance and point it to the database
-		Flyway flyway = Flyway.configure().dataSource("jdbc:postgresql://localhost:5432/online-Book_db", "root", "root").load();
+		Flyway flyway = Flyway.configure().dataSource("jdbc:mysql://localhost:3306/online_book_db", "root", "root").load();
 		
 		// Start the migration
 		flyway.migrate();
 	}
-
-
 }

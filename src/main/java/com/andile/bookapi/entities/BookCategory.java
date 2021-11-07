@@ -13,34 +13,24 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 @Table(name = "BOOK_CATEGORY")
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class BookCategory {
+public class BookCategory implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@Column(name = "category_name")
 	private String categoryName;
-	
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
 	private List<Book> book;
 
-	public BookCategory(long id, String categoryName, List<Book> book) {
-		
-		this.id = id;
-		this.categoryName = categoryName;
-		this.book = book;
-	}
-	
-	public BookCategory() {
-	
-	}
 }

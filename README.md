@@ -26,16 +26,15 @@ mvn clean install
 mvn -Dmaven.test.skip=true clean install     ## to skip the unit tests
 
 ```
-Access ```http://localhost:4000```
 
-### 3. **Clone the application**
+## 3. **Clone the application**
 
 	```bash
 	git clone https://github.com/andile/book-api.git
 	cd book-api
 	```
 
-### 4. **Create PostgreSQL database**
+## 4. **Create PostgreSQL database**
 
 	```bash
 	create online-book-db;
@@ -47,9 +46,9 @@ Access ```http://localhost:4000```
 
 	+ change `spring.datasource.username` and `spring.datasource.password` properties as per your PostgreSQL installation
 	
-### 6 . To import this project into Eclipse IDE
- ```$ mvn eclipse:eclipse```
- Import into Eclipse via **existing projects into workspace** option.
+### 6 . To import this project into YOUR IDE
+ ```
+ Import into your favourite IDE
  Done.
 ```
 
