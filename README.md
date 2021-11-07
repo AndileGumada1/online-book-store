@@ -4,7 +4,7 @@ Spring 4 MVC
 
 - Home page with the list of books
 
-![](/home/andile/Music/HOUSE/06-May/book-api/Screenshot from 2020-05-24 16-45-44.png)
+![](/home/andile/Downloads/online-book-store/Screenshot from 2020-05-24 16-45-44.png)
 
  Spring boot application Online Book store for ordering that uses REST services 
  
@@ -16,7 +16,7 @@ Spring 4 MVC
 * jQuery 1.10.2
 * Boostrap 3
 * Maven built-tool 3
-* PostgreSQL 9 pgAdmin 4
+* MYSQL 8 Workbench 4
 * Visual Studio Code
 
 ### 2. Create the jar file for Spring application
@@ -34,17 +34,17 @@ mvn -Dmaven.test.skip=true clean install     ## to skip the unit tests
 	cd book-api
 	```
 
-## 4. **Create PostgreSQL database**
+## 4. **Create MYSQL database**
 
 	```bash
 	create online-book-db;
 	```
 
-### 5. **Change PostgreSQL username and password as per your PostgreSQL installation**
+### 5. **Change MYSQL username and password as per your MYSQL installation**
 
 	+ open `src/main/resources/application.properties` file.
 
-	+ change `spring.datasource.username` and `spring.datasource.password` properties as per your PostgreSQL installation
+	+ change `spring.datasource.username` and `spring.datasource.password` properties as per your MYSQL installation
 	
 ### 6 . To import this project into YOUR IDE
  ```
